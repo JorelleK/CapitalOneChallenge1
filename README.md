@@ -1,19 +1,19 @@
 # Airbnb Listings Optimization
 
-Display any CSV file as a searchable, filterable, pretty HTML table. Done in 100% JavaScript.
-
-Check out the working demo: http://derekeder.github.io/csv-to-html-table/
+Check out the working demo: http://jorellek.github.io/CapitalOneChallenge1/
 
 ## Services
 
 #### 1. Price estimation
-
+   Use csv file to calculate the price estimation given latitude and longitude. Then, add a link on html file to read csv file.
 
 #### 2. Maps
 use iframe to embed maps to website
 
 #### 3. Bookings Optimization
-
+           Use csv file to display Price depending on location. The user can sort the price.
+           
+ ##### Script to read csv file in html
 ``` html
 <script>
   CsvToHtmlTable.init({
@@ -26,8 +26,6 @@ use iframe to embed maps to website
 </script>
 ```
 
-##### Reviews Score
-
 * `csv_path` Path to your CSV file.
 * `element` The HTML element to render your table to. Defaults to `table-container`
 * `allow_download` if true, shows a link to download the CSV file. Defaults to `false`
@@ -35,8 +33,13 @@ use iframe to embed maps to website
 * `datatables_options` DataTables configuration. See [their documentation](http://datatables.net/reference/option/).
 * `custom_formatting` **New!** A list of column indexes and custom functions to format your data (see below)
 
+##### Reviews Score
 
-#####formatting 
+Use Splunk to produce a dashboard with some graphs visualization and link it to the html page.
+
+##### formatting 
+
+    Use CSS and Javscript to format the webpage
 
 ``` html
 <script>
