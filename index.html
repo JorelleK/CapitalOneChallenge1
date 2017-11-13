@@ -2,7 +2,9 @@
 <html lang="en">
 
    	 <head>
-
+	       <meta charset="utf-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1">
    	 	      <nav class="navbar navbar-default navbar-fixed-top">
 		            <div class="container">
 			             <div class="navbar-header">
@@ -31,8 +33,7 @@
         
         <title>San Francisco Airbnb Neighborhoods</title>
         <meta name="author" content="Jorelle Kebeto">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta content="Display any CSV file as a searchable, filterable, pretty HTML table" />
           <!-- Add Bootstrap CDN -->
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -284,15 +285,23 @@
  <!-- All neighborhoods -->
      <div class="container-fluid bg-white">
      	<h2><center> All Neighborhoods </center></h2>
-	     <script>
-                             CsvToHtmlTable.init({
-                             csv_path: 'data/neighbourhoods.csv',
-                             element: 'table-container', 
-                             allow_download: true,
-                             csv_options: {separator: ';', delimiter: '"'},
-                             datatables_options: {"paging": false}
-                             });
-                     </script>
+	                          <script type="text/javascript">
+      function format_link(link){
+        if (link)
+          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+        else
+          return "";
+      }
+
+      CsvToHtmlTable.init({
+        csv_path: 'data/neighbourhoods.csv',
+        element: 'table-container', 
+        allow_download: true,
+        csv_options: {separator: ',', delimiter: '"'},
+        datatables_options: {"paging": false},
+        custom_formatting: [[4, format_link]]
+      });
+    </script>
        <div class="row">
  	       <div class="col-sm-4">
  		    	<p> 1 </p>
