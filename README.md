@@ -17,7 +17,7 @@ use iframe to embed maps to website
 ``` html
 <script>
   CsvToHtmlTable.init({
-    csv_path: 'data/Health Clinics in Chicago.csv', 
+    csv_path: 'data/review.csv', 
     element: 'table-container', 
     allow_download: true,
     csv_options: {separator: ',', delimiter: '"'},
